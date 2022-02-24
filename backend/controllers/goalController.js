@@ -11,7 +11,7 @@ const getGoals = (req, res) => {
 const setGoal = (req, res) => {
   if (!req.body.text) {
     res.status(400);
-    throw new Error("Please Add a Text Feild");
+    throw new Error("Please add a Text Feild");
   }
 
   console.log(req.body);
