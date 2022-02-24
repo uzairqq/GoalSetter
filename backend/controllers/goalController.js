@@ -10,7 +10,8 @@ const getGoals = (req, res) => {
 // @access Private
 const setGoal = (req, res) => {
   if (!req.body.text) {
-    res.status(400).json({ message: "Please Enter Your Feild" });
+    res.status(400);
+    throw new Error("Please Add a Text Feild");
   }
 
   console.log(req.body);
